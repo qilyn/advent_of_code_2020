@@ -1,21 +1,9 @@
-"""
-Goal: count the number of passports that contain all fields except cid.
+def read_passports():
+    file = [
+        l.strip()
+        for l in open('advent_of_code/day_4/data/passports.txt').readlines()
+    ]
 
-Valid fields:
-    'byr',
-    'iyr',
-    'eyr',
-    'hgt',
-    'hcl',
-    'ecl',
-    'pid',
-    'cid'
-"""
-
-file = [l.strip() for l in open('../passport.txt').readlines()]
-
-
-def read_passport(file):
     passports = []
     passport = {}
 
@@ -38,6 +26,3 @@ def read_passport(file):
     num_passports += 1
 
     return passports
-
-
-passports = read_passport(file)
