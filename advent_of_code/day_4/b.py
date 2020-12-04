@@ -3,6 +3,11 @@ import re
 from .utils import read_passports
 
 
+"""
+Goal: count the number of passports that meet the validation criteria.
+"""
+
+
 def _in_range(val, low, high):
     return val in range(low, high+1)
 
